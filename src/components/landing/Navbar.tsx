@@ -23,7 +23,7 @@ const Navbar = () => {
             <a
               key={l}
               href={`#${l.toLowerCase()}`}
-              className="font-ui text-[15px] lg:text-[17px] font-medium text-white hover:text-gray-200 transition-colors"
+              className="font-ui text-[15px] lg:text-[17px] font-medium text-black hover:text-black transition-colors"
             >
               {l}
             </a>
@@ -39,7 +39,7 @@ const Navbar = () => {
           </Button>
         </div>
 
-        <button className="justify-self-end text-white md:hidden" onClick={() => setOpen(!open)}>
+        <button className="justify-self-end text-black md:hidden" onClick={() => setOpen(!open)}>
           {open ? <X /> : <Menu />}
         </button>
       </div>
@@ -50,7 +50,7 @@ const Navbar = () => {
             <a
               key={l}
               href={`#${l.toLowerCase()}`}
-              className="font-ui block py-2 text-base font-medium text-white hover:text-gray-200"
+              className="font-ui block py-2 text-base font-medium text-black hover:text-black"
               onClick={() => setOpen(false)}
             >
               {l}

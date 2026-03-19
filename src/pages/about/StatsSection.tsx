@@ -35,7 +35,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="w-full py-16 md:py-20 bg-white">
+    <section className="w-full py-16 md:py-20 border-t-2 bg-white">
       <div className="container mx-auto px-4">
 
         {/* STATS GRID */}

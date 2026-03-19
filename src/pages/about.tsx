@@ -5,6 +5,7 @@ import HistorySection from "./about/HistorySection";
 import WhyTransitionSection from "./about/WhyTransitionSection";
 import GetStartedSection from "./about/GetStartedSection";
 import Aboutherosection from "./about/aboutherosection";
+import Footer from "@/components/landing/Footer";
 
 
 const Index = () => (
@@ -15,6 +16,7 @@ const Index = () => (
     <HistorySection/>
     <WhyTransitionSection/>
     <GetStartedSection/>
+    <Footer/>
   </div>
 );
 

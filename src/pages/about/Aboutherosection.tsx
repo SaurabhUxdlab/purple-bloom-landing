@@ -1,14 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-
+import illustration from "@/assets/illustration.png";
+import breakfastImg from "@/assets/breakfast.png";
 // Assets - Using the filenames you provided
-import illustration from "@/assets/cf3541eacc1a82dc272c4a936c7fea32 1.jpg";
-import breakfastImg from "@/assets/Rectangle 34624694.png";
 
 const Aboutherosection = () => {
   return (
-    <section className="w-full py-16 md:py-24 bg-white overflow-hidden">
+    <section className="w-full py-16 md:py-24 bg-white border-b overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
