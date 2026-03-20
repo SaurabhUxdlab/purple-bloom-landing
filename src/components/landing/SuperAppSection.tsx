@@ -1,98 +1,113 @@
 import { motion } from "framer-motion";
+import googleImg from "@/assets/googleplay.png";
+import appStoreImg from "@/assets/appstore.png";
 
-const features = [
-  {
-    title: "Data Bank",
-    description:
-      "Store your medical history in an encrypted vault and share it with doctors or labs only when you choose. Privacy and security, guaranteed.",
-  },
-  {
-    title: "Ask me",
-    description:
-      "Ask Me provides 24/7 tailored advice powered by AI that knows your health data, plus access to on-call doctors when needed.",
-  },
-  {
-    title: "Calendar",
-    description:
-      "Our smart calendar organizes your health tasks, appointments, and sends reminders so you never miss an important step.",
-  },
-  {
-    title: "Reports",
-    description:
-      "Understand lab results, spot trends, and make informed decisions with AI-powered graphs and insights tailored to your health journey.",
-  },
-  {
-    title: "Workouts & Events",
-    description:
-      "Get personalized fitness plans, fun challenges, and expert guidance to help transform your body and lifestyle.",
-  },
-  {
-    title: "Insights",
-    description:
-      "Explore expert-backed tips, articles, and AI-driven recommendations tailored specifically to your needs.",
-  },
-];
+const SuperAppSection = () => {
+  return (
+    <section className="bg-[#f5f6f8] py-20 overflow-hidden">
 
-const SuperAppSection = () => (
-  <section className="bg-white py-20 px-4 md:px-8">
-    <div className="container mx-auto max-w-6xl">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="text-center"
-      >
-        <h2 className="font-body text-[59px] leading-[71px] font-medium text-[#090909] max-w-4xl mx-auto">
-          The ALL-IN-ONE APP that helps to manage your Daily Health.
+      {/* HEADER (CENTERED) */}
+      <div className="max-w-5xl mx-auto text-center px-4 mb-20">
+        <h2 className="text-[34px] md:text-[48px] font-bold text-[#1a1a1a] leading-tight">
+          The ALL-IN-ONE App that helps <br className="hidden md:block" />
+          to manage your Daily Health.
         </h2>
-        <p className="mt-5 font-body text-base md:text-2xl text-[#2a2a2a]">
-          Your partner in health - easy, safe, and always there when you need it.
+
+        <p className="mt-4 text-gray-500 text-base md:text-lg">
+          Your partner in health – easy, safe, and always there when you need it.
         </p>
-      </motion.div>
+      </div>
 
-      <div className="mt-16 grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+      {/* 50-50 SECTION */}
+      <div className="grid lg:grid-cols-2 items-center">
+
+        {/* LEFT IMAGE (FULL 50%) */}
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
+          initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="relative mx-auto h-[680px] w-full max-w-[560px]"
+          className="w-full "
         >
-
-          <img
-            src="/Images/iPhone 16 Pro.jpg"
-            alt="DeHealth App Preview"
-            className="absolute left-1/2 top-[120px] w-[420px] h-auto -translate-x-1/2 drop-shadow-[0_18px_35px_rgba(0,0,0,0.45)] rounded-r-[30px]"
-          />
+          <div className="w-full ">
+            <img
+  src="/Images/hand-holding-phone-bg.png"
+  alt="Health App"
+  className="w-full max-h-[790px] object-cover rounded-r-[40px]"
+/>
+          </div>
         </motion.div>
 
+        {/* RIGHT CONTENT (50%) */}
         <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="font-body text-base md:text-lg text-[#1f1f1f]"
-        >
-          <div className="rounded-[24px] bg-[#d8cadb] p-6 mb-5">
-            <h3 className="text-xl md:text-2xl font-semibold text-[#151515]">Global Health ID</h3>
-            <p className="mt-2 leading-relaxed">
-              Keep all your medical records in one app, accessible anytime. Perfect for managing your health across clinics or while traveling.
-            </p>
-          </div>
+  initial={{ opacity: 0, x: 60 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.7 }}
+  className="w-full flex items-center justify-start pl-10 md:pl-16 lg:pl-20 py-10"
+>
+  <div className="max-w-[520px] w-full">
 
-          <div className="space-y-3 leading-relaxed">
-            {features.map((feature) => (
-              <div key={feature.title}>
-                <h4 className="text-lg md:text-2xl font-semibold text-[#111111]">{feature.title}</h4>
-                <p>{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
+    {/* TITLE */}
+    <h3 className="text-[52px] md:text-[58px] font-bold text-[#4a154b] leading-tight">
+      Your daily nutrition,
+      <br />
+      simplified
+    </h3>
+
+    {/* UNDERLINE */}
+    <svg
+      width="140"
+      height="10"
+      viewBox="0 0 180 12"
+      fill="none"
+      className="mt-2 mb-6 opacity-70"
+    >
+      <path
+        d="M3 9C45 4 135 2 177 8"
+        stroke="#4a154b"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+    </svg>
+
+    {/* DESCRIPTION */}
+    <p className="text-gray-500 text-[20px] leading-relaxed mb-6">
+      Get clear, personalized guidance on meals and timing to stay consistent and feel your best.
+    </p>
+
+    {/* REVIEWS */}
+    <p className="text-[20px] font-bold text-[#4a154b] mb-6">
+      465,121{" "}
+      <span className="text-gray-700 font-medium text-[15px]">
+        reviews and counting
+      </span>
+    </p>
+
+    {/* APP SECTION */}
+    <div>
+      <p className="font-semibold text-gray-900 text-lg mb-3">
+        Get the App!
+      </p>
+
+      <div className="flex gap-3">
+        <img
+          src={googleImg}
+          alt="Google Play"
+          className="h-15"
+        />
+        <img
+          src={appStoreImg}
+          alt="App Store"
+          className="h-15"
+        />
       </div>
     </div>
-  </section>
-);
+
+  </div>
+</motion.div>
+
+      </div>
+    </section>
+  );
+};
 
 export default SuperAppSection;

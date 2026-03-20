@@ -1,10 +1,10 @@
-import Navbar from "@/components/landing/Navbar";
+import Navbar from "@/components/Navbar";
 
 import StatsSection from "./about/StatsSection";
 import HistorySection from "./about/HistorySection";
 import WhyTransitionSection from "./about/WhyTransitionSection";
 import GetStartedSection from "./about/GetStartedSection";
-import Aboutherosection from "./about/aboutherosection";
+import Aboutherosection from "./about/Aboutherosection";
 import Footer from "@/components/landing/Footer";
 
 

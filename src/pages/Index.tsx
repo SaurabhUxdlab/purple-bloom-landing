@@ -1,7 +1,7 @@
-import Navbar from "@/components/landing/Navbar";
+import Navbar from "@/components/landing/Navbar-Landingpage";
 import HeroSection from "@/components/landing/HeroSection";
 import SuperAppSection from "@/components/landing/SuperAppSection";
-import AboutSection from "@/components/landing/AboutSection";
+
 import DoctorSection from "@/components/landing/DoctorSection";
 import ProgramsSection from "@/components/landing/ProgramsSection";
 import TrackSection from "@/components/landing/TrackSection";
@@ -10,13 +10,14 @@ import TestimonialsSection from "@/components/landing/TestimonialsSection";
 import PricingSection from "@/components/landing/PricingSection";
 import CTASection from "@/components/landing/CTASection";
 import Footer from "@/components/landing/Footer";
+import FeaturesSection from "@/components/landing/FeaturesSection";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
     <Navbar />
     <HeroSection />
     <SuperAppSection />
-    <AboutSection />
+    <FeaturesSection/>
     <DoctorSection />
     <ProgramsSection />
     <TrackSection />
