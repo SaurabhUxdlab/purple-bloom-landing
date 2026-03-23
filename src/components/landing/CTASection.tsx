@@ -1,29 +1,64 @@
+import React from 'react';
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
-const CTASection = () => (
-  <section className="py-24 px-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-primary" />
-    <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 30% 50%, hsl(270 50% 60%), transparent 70%)" }} />
+// Update this path to your heart-shaped brand icon
+import heartIcon from "@/assets/heart-icon.png"; 
 
-    <div className="container relative z-10 mx-auto max-w-3xl text-center">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-      >
-        <h2 className="font-display text-3xl md:text-5xl font-bold text-primary-foreground mb-6">
-          Your transformation starts today.
-        </h2>
-        <p className="text-primary-foreground/80 text-lg mb-10">
-          Join thousands who have reclaimed their health through the power of plants and expert medical guidance.
-        </p>
-        <Button variant="cta" size="lg" className="text-base px-10 py-6 bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-          💜 Book Your Consultation
-        </Button>
-      </motion.div>
-    </div>
-  </section>
-);
+const CTASection = () => {
+  return (
+    <section className="bg-white py-24 px-4 font-sans">
+      <div className="max-w-5xl mx-auto">
+        
+        {/* TOP HEADING - Matches the dual-color typography */}
+        <div className="text-center mb-14">
+          <h2 className="text-[28px] md:text-[34px] font-bold leading-tight tracking-tight">
+            <span className="text-[#4a154b]">The Transition is lovingly created</span>
+            <br />
+            <span className="text-[#4a154b]">by doctors and scientists</span>
+            <span className="text-gray-900"> from around the world.</span>
+          </h2>
+        </div>
+
+        {/* FLOATING CTA CARD - Matches the border-radius and layout */}
+        <motion.div 
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="border border-[#4a154b]/40 rounded-[35px] p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 transition-shadow hover:shadow-sm"
+        >
+          <div className="flex items-center gap-6">
+            {/* Heart Icon */}
+            <div className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0">
+              <img 
+                src={heartIcon} 
+                alt="Transition" 
+                className="w-full h-full object-contain"
+              />
+            </div>
+
+            {/* Text Content */}
+            <div className="text-left">
+              <h3 className="text-[#4a154b] text-[22px] md:text-[25px] font-bold mb-1">
+                Start your Transition from $9.99
+              </h3>
+              <p className="text-gray-500 text-[15px] md:text-[17px] font-medium leading-relaxed">
+                Stay healthy and organized—try our app and start improving your life today.
+              </p>
+            </div>
+          </div>
+
+          {/* Action Button - Exact pill shape and dark plum color */}
+          <Button 
+            className="rounded-full bg-[#300132] hover:bg-[#4a154b] text-white px-10 py-7 text-[16px] font-bold shadow-md h-auto"
+          >
+            Learn More
+          </Button>
+        </motion.div>
+
+      </div>
+    </section>
+  );
+};
 
 export default CTASection;

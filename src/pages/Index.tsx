@@ -1,16 +1,10 @@
 import Navbar from "@/components/landing/Navbar-Landingpage";
 import HeroSection from "@/components/landing/HeroSection";
 import SuperAppSection from "@/components/landing/SuperAppSection";
-
-import DoctorSection from "@/components/landing/DoctorSection";
-import ProgramsSection from "@/components/landing/ProgramsSection";
-import TrackSection from "@/components/landing/TrackSection";
-import AIAssistantSection from "@/components/landing/AIAssistantSection";
-import TestimonialsSection from "@/components/landing/TestimonialsSection";
-import PricingSection from "@/components/landing/PricingSection";
 import CTASection from "@/components/landing/CTASection";
 import Footer from "@/components/landing/Footer";
 import FeaturesSection from "@/components/landing/FeaturesSection";
+import BlogSection from "@/components/landing/BlogSection";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
@@ -18,13 +12,8 @@ const Index = () => (
     <HeroSection />
     <SuperAppSection />
     <FeaturesSection/>
-    <DoctorSection />
-    <ProgramsSection />
-    <TrackSection />
-    <AIAssistantSection />
-    <TestimonialsSection />
-    <PricingSection />
     <CTASection />
+    <BlogSection/>
     <Footer />
   </div>
 );

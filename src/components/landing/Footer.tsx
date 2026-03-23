@@ -1,105 +1,116 @@
 import { Instagram, Linkedin, Twitter, Facebook, Phone, Mail } from "lucide-react";
+
+// Assuming these are your asset paths
 import logo from "@/assets/logo1.png";
-import googlePlayImg from "@/assets/googleplay.png"; // Use the actual badges if available
+import googlePlayImg from "@/assets/googleplay.png";
 import appStoreImg from "@/assets/appstore.png";
+
 const Footer = () => {
   return (
-    <footer className="bg-[#3B0A45] text-white py-16 px-6 font-sans">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          
-          {/* LEFT SECTION (Logo and App Badges) - Takes up 2 columns */}
-          <div className="lg:col-span-2 space-y-6">
-            <div className="flex items-center gap-4">
-              <img src={logo} alt="The Transition Logo" className="w-22 h-14 object-contain" />
-              <div>
-               
-                
-              </div>
+    <footer className="bg-[#300132] text-white py-24 px-4 md:px-4 font-sans">
+      <div className="max-w-5xl mx-auto">
+        
+        {/* MAIN GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 items-start">
+
+          {/* 1. LEFT BRAND SECTION (Col span 4) */}
+          <div className="lg:col-span-4 space-y-6">
+            <div className="flex items-center gap-3">
+              <img src={logo} alt="Logo" className="h-14 w-auto object-contain" />
+              
             </div>
 
-            <p className="text-xl font-medium">Your Health In Your Hands</p>
+            <p className="text-xl font-medium tracking-wide">
+              Your Health In Your Hands
+            </p>
 
             <div className="space-y-3">
-              <p className="text-sm font-semibold">Get the App!</p>
+              <p className="text-xs font-bold uppercase tracking-wider">Get the App!</p>
               <div className="flex gap-3">
-                <img
-                  src={googlePlayImg}
-                  alt="Google Play"
-                  className="h-10 cursor-pointer"
-                />
-                <img
-                  src={appStoreImg}
-                  alt="App Store"
-                  className="h-10 cursor-pointer"
-                />
+                <img src={googlePlayImg} alt="Google Play" className="h-10 cursor-pointer hover:opacity-80 transition-opacity" />
+                <img src={appStoreImg} alt="App Store" className="h-10 cursor-pointer hover:opacity-80 transition-opacity" />
               </div>
             </div>
           </div>
 
-          {/* LINKS SECTIONS */}
-          <div>
-            <h4 className="text-lg font-semibold mb-5">About</h4>
-            <ul className="space-y-3 text-sm opacity-90">
-              <li className="hover:opacity-100 cursor-pointer transition-opacity">Features</li>
-              <li className="hover:opacity-100 cursor-pointer transition-opacity">Pricing</li>
-              <li className="hover:opacity-100 cursor-pointer transition-opacity">Contact</li>
-            </ul>
+          {/* 2. NAVIGATION COLUMNS & SOCIALS (Col span 5) */}
+          <div className="lg:col-span-5">
+            <div className="grid grid-cols-3 gap-4">
+              {/* About */}
+              <div>
+                <h4 className="text-lg font-bold mb-5">About</h4>
+                <ul className="space-y-3 text-[14px] opacity-80">
+                  <li className="hover:text-gray-300 cursor-pointer">Features</li>
+                  <li className="hover:text-gray-300 cursor-pointer">Pricing</li>
+                  <li className="hover:text-gray-300 cursor-pointer">Contact</li>
+                </ul>
+              </div>
+
+              {/* Articles */}
+              <div>
+                <h4 className="text-lg font-bold mb-5">Articles</h4>
+                <ul className="space-y-3 text-[14px] opacity-80">
+                  <li className="hover:text-gray-300 cursor-pointer">Blog</li>
+                  <li className="hover:text-gray-300 cursor-pointer">Get in Touch</li>
+                  <li className="hover:text-gray-300 cursor-pointer">Plans</li>
+                </ul>
+              </div>
+
+              {/* Pricing */}
+              <div>
+                <h4 className="text-lg font-bold mb-5">Pricing</h4>
+                <ul className="space-y-3 text-[14px] opacity-80">
+                  <li className="hover:text-gray-300 cursor-pointer">Resources</li>
+                  <li className="hover:text-gray-300 cursor-pointer">Pricing</li>
+                  <li className="hover:text-gray-300 cursor-pointer">Support</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* SOCIAL ICONS (Aligned under the link columns as per SS) */}
+            <div className="flex gap-4 mt-12">
+              {[Instagram, Linkedin, Twitter, Facebook].map((Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="bg-white text-[#300132] w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-200 transition-all shadow-md"
+                >
+                  <Icon size={20} strokeWidth={2.5} />
+                </a>
+              ))}
+            </div>
           </div>
 
-          <div>
-            <h4 className="text-lg font-semibold mb-5">Articles</h4>
-            <ul className="space-y-3 text-sm opacity-90">
-              <li className="hover:opacity-100 cursor-pointer transition-opacity">Blog</li>
-              <li className="hover:opacity-100 cursor-pointer transition-opacity">Get in Touch</li>
-              <li className="hover:opacity-100 cursor-pointer transition-opacity">Plans</li>
-            </ul>
-          </div>
+          {/* 3. RIGHT CONTACT & SUBSCRIBE (Col span 3) */}
+          <div className="lg:col-span-3 space-y-10">
+            {/* Contact */}
+            <div>
+              <h4 className="text-lg font-bold mb-5">Content</h4>
+              <div className="space-y-4 text-[14px]">
+                <div className="flex items-center gap-3">
+                  <Phone size={18} className="text-white/80" />
+                  <span>+1 (123) 456-7893</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Mail size={18} className="text-white/80" />
+                  <span>stjohnsdpc@gmail.com</span>
+                </div>
+              </div>
+            </div>
 
-          <div>
-            <h4 className="text-lg font-semibold mb-5">Pricing</h4>
-            <ul className="space-y-3 text-sm opacity-90">
-              <li className="hover:opacity-100 cursor-pointer transition-opacity">Resources</li>
-              <li className="hover:opacity-100 cursor-pointer transition-opacity">Pricing</li>
-              <li className="hover:opacity-100 cursor-pointer transition-opacity">Support</li>
-            </ul>
-          </div>
-
-          {/* CONTACT & SOCIAL */}
-          <div className="lg:col-span-1">
-            <h4 className="text-lg font-semibold mb-5">Content</h4>
-            
+            {/* Subscribe */}
             <div className="space-y-4">
-              <div className="flex items-center gap-3 text-sm opacity-90">
-                <Phone size={18} />
-                <span>+1 (123) 456-7893</span>
+              <h4 className="text-2xl font-bold">Subscribe</h4>
+              <p className="text-[14px] opacity-90 leading-snug">
+                Join our community to receive update
+              </p>
+              <div className="bg-white rounded-full flex items-center p-1 w-full max-w-[280px]">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-5 py-2 text-sm text-black outline-none bg-transparent placeholder:text-gray-400"
+                />
               </div>
-
-              <div className="flex items-center gap-3 text-sm opacity-90">
-                <Mail size={18} />
-                <span>stjohnsdpc@gmail.com</span>
-              </div>
-
-              <div className="flex gap-4 pt-4">
-  {[
-    { Icon: Instagram, size: 20 },
-    { Icon: Linkedin, size: 20 },
-    { Icon: Twitter, size: 20 },
-    { Icon: Facebook, size: 20 },
-  ].map(({ Icon, size }, i) => (
-    <a
-      key={i}
-      href="#"
-      className="bg-white text-[#3B0A45] w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
-    >
-      <Icon 
-        size={size} 
-        strokeWidth={2.5} /* Increased thickness to match the image */
-        className="shrink-0" 
-      />
-    </a>
-  ))}
-</div>
             </div>
           </div>
 

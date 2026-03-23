@@ -8,7 +8,7 @@ import Aboutherosection from "./about/Aboutherosection";
 import Footer from "@/components/landing/Footer";
 
 
-const Index = () => (
+const about = () => (
   <div className="min-h-screen bg-background">
     <Navbar />
     <Aboutherosection/>
@@ -20,4 +20,4 @@ const Index = () => (
   </div>
 );
 
-export default Index;
+export default about;
